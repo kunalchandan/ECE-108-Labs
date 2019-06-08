@@ -22,12 +22,12 @@ void print_table(std::string input){
     // Iterate through all numbers from 0 to 2^variables
     for(int x = 0; x < 1 << num_vars; x++){
         // Mask and get bool value of each number
-        for(int k = 0; k < num_vars; k++){
+        for(int k = num_vars - 1; k >= 0; k--){
             int mask = 1 << k;
             int masked = (x & mask) >> k;
             set[k] = (bool)masked;
 
-            std::cout << masked << " | ";
+            std::cout << (masked?"T":"F") << " | ";
         }
         // Apply operation command to each variable
         bool final = set[0];
