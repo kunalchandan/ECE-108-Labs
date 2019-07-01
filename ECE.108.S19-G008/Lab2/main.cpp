@@ -34,11 +34,11 @@ int* read_expression(const string fileName){
     cout << "Reading Expression..." << endl;
 
     char prev_char = '1';
-    int col = 0;
+    int expr_num = 0;
     while (dimacs >> this_char) {
         if (this_char == '0'){
             cout << endl;
-            col ++;
+            expr_num ++;
 
         }else if (this_char == ' '){
             continue;
@@ -51,8 +51,8 @@ int* read_expression(const string fileName){
                 var = var * -1;
             }
             int index = abs(var) - 1;
-            expr[IX(col, index, num_clauses)] = ((var > 0) ? 1: -1);
-            cout << ((var > 0)? "1": "-1");
+            expr[IX(expr_num, index, num_vars)] = ((var > 0) ? 1: -1);
+            cout << ((var > 0)? "  1": " -1");
             prev_char = this_char;
         }
     }
@@ -61,9 +61,9 @@ int* read_expression(const string fileName){
     return expr;
 }
 
-std::vector<std::vector<int>>* read_tests(){
-    auto *tests = new std::vector<std::vector<int>>();
-    auto *line = new std::vector<int>();
+std::vector<std::vector<int>> read_tests(int num_vars){
+    std::vector<std::vector<int>> tests;
+    std::vector<int> line ((u_long)num_vars);
     int c_num;
     string input;
     std::getline(cin, input);
@@ -71,10 +71,12 @@ std::vector<std::vector<int>>* read_tests(){
 
     while(iss >> c_num){
         if(c_num == 0){
-            tests->push_back(*line);
-            line->clear();
+            tests.push_back(line);
+            for(int x = 0; x < num_vars; x++){
+                line.at((u_long)x) = 0;
+            }
         }else{
-            line->push_back(c_num);
+            line.at((u_long)abs(c_num)-1) = (c_num > 0)? 1 : -1;
         }
     }
     return tests;
@@ -95,13 +97,11 @@ int main(int argc, char *argv[]) {
     dimacs >> numVars >> numClauses;
     dimacs.close();
 
-    cout << "Variables: " << numVars << " Clauses: " << numClauses << endl;
-
     // Size = [numClauses*numVars]
     int* all = read_expression(fileName);
 
     // Size = [numTests*numVars]
-    std::vector<std::vector<int>> tests = *read_tests();
+    std::vector<std::vector<int>> tests = read_tests(numVars);
     int numTests = (int)(tests.size());
 
     for(int t = 0; t < numTests; t++){
