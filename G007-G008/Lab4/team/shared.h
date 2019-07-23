@@ -1,19 +1,28 @@
 #include <iostream>
+#include <vector>
+#include <stdlib.h>
 
-int main();
+
+
+std::vector<int> thiccc_stack(500);
+int input_prev{0}, input_curr{0}, stack_size{500};					// input_prev is initialized as 0 so that if the first number is key, do nothing
+
+
 
 void stack_input(){
-    int input_prev{0}, input_curr{0}, stack_size{500};
-    for(int i = 0; i < stack_size; ++i){
-        std::cin >> input_curr;
-        if (input_curr == 9 | input_curr == 18 | input_curr == 27){
-            stack_size += input_prev;
-        }else if(input_curr == 13){
-            stack_size -= input_prev;
-        }
-    }
-    // what happens if the first number is 9/18/27/13
-    // also what happens if we almost the end like the last 2 numbers and you get a 13 and the previous number is like 100
-    
-    return 0;
+	for(int i = 0; i < stack_size; ++i){
+		input_curr = rand() % 111;
+		if(input_curr == 9 | input_curr == 18 | input_curr == 27){
+		    thiccc_stack[i] = input_curr;
+		    thiccc_stack.resize(stack_size += input_prev);
+		    input_prev = input_curr;
+		}else if(input_curr == 13){
+		    thiccc_stack[i] = input_curr;
+		    thiccc_stack.resize(stack_size -= input_prev);
+		    input_prev = input_curr;
+		}else{
+		    thiccc_stack[i] = input_curr;
+		    input_prev = input_curr;
+		}
+	}
 }
