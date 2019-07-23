@@ -22,7 +22,7 @@ void stack_input(){
 			// if the input is 13 then decrease stack size by prev input
 			// note that if i exceeds stack_size, the for loop will immediately end and all contents unfit for the stack will be truncated
 		    thiccc_stack[i] = input_curr;
-			if(stack_size -= input_prev < 0){
+			if(stack_size - input_prev < 0){
 			// if the stack size decreases below zero, set straight to 0
 				thiccc_stack.resize(0);
 			}else{
