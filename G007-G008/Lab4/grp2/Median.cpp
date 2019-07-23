@@ -36,8 +36,15 @@ float Median::evaluate(unsigned int input_size, vector<int> data_set) {
         this->median = data_set[floor(input_size/2)];
     }else{
         cout << "Median Even: ";
-        this->median = (data_set[input_size/2 - 1] + data_set[input_size/2])/2;
+        this->median = (data_set[input_size/2 - 1] + data_set[input_size/2])/2.0;
     }
     cout << this->median << std::endl;
     return this->median;
+}
+int main() {
+    Median *median = new Median();
+    int n[] = {1, 2, 3, 4};
+    vector<int> test(n, n + 4);
+    median->evaluate(test.size(), test);
+    return 0;
 }
