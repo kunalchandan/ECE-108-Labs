@@ -5,7 +5,7 @@
 
 
 std::vector<int> thiccc_stack(500);
-int input_prev{0}, input_curr{0}, stack_size{500};					// input_prev is initialized as 0 so that if the first number is key, do nothing
+int input_prev{0}, input_curr{0}, stack_size{500};
 
 
 
