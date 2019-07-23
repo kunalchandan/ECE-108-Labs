@@ -28,7 +28,6 @@ void stack_input(){
 			}else{
 				thiccc_stack.resize(stack_size -= input_prev);
 			}
-		}
 		    input_prev = input_curr;
 		}else{
 			// if the input is not important then input to stack as is
