@@ -39,4 +39,5 @@ float Median::evaluate(unsigned int input_size, vector<int> data_set) {
         this->median = (data_set[input_size/2 - 1] + data_set[input_size/2])/2;
     }
     cout << this->median << std::endl;
+    return this->median;
 }
