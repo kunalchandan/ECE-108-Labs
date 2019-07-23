@@ -31,7 +31,8 @@ unsigned int Median::get_size() {
 float Median::evaluate(unsigned int input_size, vector<int> data_set) {
     this->input_size = input_size;
     sort(data_set.begin(), data_set.end());
-    if (input_size%2 == 1){
+    //if the size is odd then just take the middle term, otherwise, take the mean of the middle two terms.
+    if (input_size % 2 == 1){
         cout << "Median Odd: ";
         this->median = data_set[floor(input_size/2)];
     }else{
@@ -42,9 +43,5 @@ float Median::evaluate(unsigned int input_size, vector<int> data_set) {
     return this->median;
 }
 int main() {
-    Median *median = new Median();
-    int n[] = {1, 2, 3, 4};
-    vector<int> test(n, n + 4);
-    median->evaluate(test.size(), test);
     return 0;
 }
