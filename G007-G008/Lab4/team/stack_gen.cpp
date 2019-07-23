@@ -11,10 +11,10 @@ std::vector<int> dataset() {
     // Random number generation
     std::random_device rd;
     std::mt19937 gen(rd());
+    std::uniform_int_distribution<> random(0, 110);
     std::vector<int> full_send;
     for (int x = 0; x < stack; x++) {
         // Generate Random number each step
-        std::uniform_int_distribution<> random(0, 110);
         rand = random(gen);
         if ((rand % 9 == 0) && (rand <= 27)) {
             stack += full_send.back();
