@@ -6,9 +6,8 @@
 using std::cout;
 using std::endl;
 using std::vector;
-using std::sort;
-using std::ceil;
-using std::floor;
+
+
 
 Mean::Mean() {
 	this ->mean = 0;
@@ -41,7 +40,10 @@ float Mean::calculated(unsigned int input_size, vector<int> input_set) {
 		sum += input_set[i];
 		
 	}
+	//finds sum of all values in the vector 
+	
 	this->mean = sum / input_size;
+	
 	cout << this->mean << endl;
 	
 	return this->mean;
