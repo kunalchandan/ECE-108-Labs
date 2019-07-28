@@ -22,14 +22,22 @@ bool testMean(){
 }
 
 bool testMean(unsigned int input_size, std::vector<int> input_set){
+	
+	float input_mean{};
+	float sum{0};
+	for(int i = 0; i < input_size; ++i){
+		sum += input_set[i];
+	}
+	input_mean = sum / input_size;
+	
 	bool output = true;
 	Mean testing;
-	testing.calculated(unsigned int input_size, std::vector<int> input_set);
+	testing.calculated(input_size, input_set);
 	
-	if(testing.get_mean != testing -> mean){
+	if(testing.get_mean() != input_mean){
 		output = false;
 	}
-	if(testing.get_size != testing -> input_size){
+	if(testing.get_size() != input_size){
 		output = false;
 	}
 	
