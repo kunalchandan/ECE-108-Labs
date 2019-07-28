@@ -2,12 +2,8 @@
 #include <vector>
 #include <stdlib.h>
 
-
-
 std::vector<int> thiccc_stack(500);
 int input_prev{0}, input_curr{0}, stack_size{500};
-
-
 
 void stack_input(){
 	srand(time(NULL));
