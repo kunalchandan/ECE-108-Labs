@@ -8,11 +8,13 @@ bool testMean(){
 	bool output = true;
 	Mean testing;
 	
-	if(testing.get_mean != 0){
+	if(testing.get_mean() != 0){
+		std::cout << "Test failed: Mean::get_mean()" << std::endl;
 		output = false;
 	}
 	
-	if(testing.get_size != 0){
+	if(testing.get_size() != 0){
+		std::cout << "Test failed: Mean::get_size()" << std::endl;
 		output = false;
 	}
 	
@@ -21,19 +23,13 @@ bool testMean(){
 
 bool testMean(unsigned int input_size, std::vector<int> input_set){
 	bool output = true;
-	
-	// not sure if this is how we're supposed to implement the function, going to confirm later today -- Leo
 	Mean testing;
 	testing.calculated(unsigned int input_size, std::vector<int> input_set);
 	
-	// this may be the correct way idk -- Leo
-	Mean testing(unsigned int input_size, std::vector<int> input_set);
-	GIT COMMIT
-	// are we supposed to test it against known stacks or randomized stacks? Just one stack or multiple? -- Leo
-	if(testing.get_mean != WHATEVER_THE_MEAN_IS_REEEEEEEEEEEEEEEEEEEEEEEEEE){
+	if(testing.get_mean != testing -> mean){
 		output = false;
 	}
-	if(testing.get_size != stack_size){
+	if(testing.get_size != testing -> input_size){
 		output = false;
 	}
 	
