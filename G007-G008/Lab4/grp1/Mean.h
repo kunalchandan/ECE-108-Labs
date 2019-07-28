@@ -1,6 +1,6 @@
 //Mean class declaration 
 #include <vector>
-using std::vector
+using std::vector;
 
 class Mean{
 	public:
