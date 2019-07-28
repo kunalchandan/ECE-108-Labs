@@ -11,7 +11,7 @@ using std::vector;
 
 Mean::Mean() {
 	this ->mean = 0;
-	this->input_size - 0;
+	this->input_size = 0;
 	cout << "Mean Class instantiated" << endl;
 	
 }
