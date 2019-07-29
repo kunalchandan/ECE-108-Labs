@@ -14,9 +14,6 @@ std::vector<int> dataset() {
     std::uniform_int_distribution<> random(0, 110);
     std::vector<int> full_send;
     for (int x = 0; x < stack; x++) {
-        if(x%10 == 0){
-            std::cout << stack << " --- " << x << std::endl;
-        }
         // Generate Random number each step
         rand = random(gen);
         if ((rand % 9 == 0) && (rand <= 18)) {
@@ -39,7 +36,9 @@ std::vector<int> dataset() {
     return full_send;
 }
 
+/*
 int main(int argc, char *argv[]) {
     std::vector<int> sample_data = dataset();
     return 0;
 }
+*/
