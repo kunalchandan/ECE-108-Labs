@@ -42,6 +42,3 @@ float Median::evaluate(unsigned int input_size, vector<int> data_set) {
     cout << this->median << std::endl;
     return this->median;
 }
-int main() {
-    return 0;
-}

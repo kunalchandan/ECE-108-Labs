@@ -1,4 +1,6 @@
 #include <vector>
+#include "testMean.cpp"
+#include "testMedian.cpp"
 #include "stack_gen.cpp"
 
 int main(int argc, char *argv[]) {
@@ -31,23 +33,36 @@ int main(int argc, char *argv[]) {
     switch (opp_code) {
       case 1:
       // Generate a Test Mean Class???
-      // Basically I'm gonna run the test Mean function
+      // Basically I'm gonna run the test Mean function on data >= 500
+      testMean(data);
       break;
 
       case 2:
       // Generate a Test Median Class???
+      testMedian(data);
       break;
 
       case 3:
       // Mean ten data samples
+      testMean(test);
       break;
 
       case 4:
       // Medain ten data samples
+      testMedian(test);
       break;
 
       case 5:
       // Mean vs Medain conclusion
+      float mean = 0;
+      Mean mean();
+      mean = mean.calculated(data.size(), data);
+
+      float median = 0;
+      Median median();
+      median = median.calculated(data.size(), data);
+
+      std::cout << "Mean:: " << mean << std::endl << "Median:: " << median << std::endl;
       break;
 
       case 6:

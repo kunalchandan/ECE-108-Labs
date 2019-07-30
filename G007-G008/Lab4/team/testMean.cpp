@@ -1,10 +1,11 @@
-#include "testMean.h"
 #include "Mean.h"
+#include "testMean.h"
 #include "stack_gen.cpp"
 #include <iostream>
 
 int main();
 
+// I'm not sure this function needs to exist
 bool testMean(){
 	bool output = true;
 	Mean testing;
@@ -22,23 +23,30 @@ bool testMean(){
 	return output;
 }
 
-bool testMean(unsigned int input_size, std::vector<int> input_set){
+bool testMean(std::vector<int> input_set){
+	uint input_size = input_set.size();
 
-	float input_mean{};
-	float sum{0};
+	bool output = true;
+
+	// Calculate Mean once here
+	float input_mean = 0;
+	float sum = 0;
 	for(int i = 0; i < input_size; ++i){
 		sum += input_set[i];
 	}
 	input_mean = sum / input_size;
 
-	bool output = true;
+	// Get Mean calculated by Mean calss
 	Mean testing;
 	testing.calculated(input_size, input_set);
 
+	// Compare calculated and retrieved values
 	if(testing.get_mean() != input_mean){
+		std::cout << "Our mean, and the mean calculated by the Mean Class do not match" << std::endl;
 		output = false;
 	}
 	if(testing.get_size() != input_size){
+		std::cout << "Our input size, and the size calculated by the Mean Class do not match" << std::endl;
 		output = false;
 	}
 
