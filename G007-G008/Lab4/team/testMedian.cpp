@@ -33,7 +33,8 @@ bool testMedian(){
     return passed;
 }
 
-bool testMedian(unsigned int input_size, vector<int> data_set){
+bool testMedian(vector<int> data_set){
+    int input_size = data_set.size();
     bool passed = true;
     float median{0.0};
     string message = "";
