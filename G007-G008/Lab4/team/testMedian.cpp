@@ -1,5 +1,5 @@
 #include "testMedian.h"
-#include "Median.cpp"
+#include "Median.h"
 #include "shared.cpp"
 #include <iostream>
 #include <string>
