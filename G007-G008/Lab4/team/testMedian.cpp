@@ -39,6 +39,7 @@ bool testMedian(vector<int> data_set){
     float median{0.0};
     string message = "";
     Median test;
+    test.evaluate(data_set);
 
     if (input_size % 2 == 1){
         median = data_set[floor(input_size/2)];
