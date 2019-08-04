@@ -1,4 +1,3 @@
-#include "stack_gen.cpp"
 #include <iostream>
 
 bool testMean();
