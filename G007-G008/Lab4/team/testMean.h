@@ -1,4 +1,3 @@
-#include "testMean.h"
 #include "Mean.h"
 #include "stack_gen.cpp"
 #include <iostream>

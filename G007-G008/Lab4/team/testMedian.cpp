@@ -1,5 +1,5 @@
 #include <iostream>
-#include "medianTest.h"
+#include "testMedian.h"
 #include "Median.cpp"
 #include "stack_gen.cpp"
 #include "shared.cpp"
