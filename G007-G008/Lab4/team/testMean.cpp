@@ -33,7 +33,7 @@ bool testMean(std::vector<int> input_set){
 	}
 	input_mean = sum / input_size;
 
-	// Get Mean calculated by Mean calss
+	// Get Mean calculated by Mean class
 	Mean testing;
 	testing.calculated(input_size, input_set);
 
