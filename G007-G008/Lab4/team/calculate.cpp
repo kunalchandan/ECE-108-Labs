@@ -54,13 +54,13 @@ int main(int argc, char *argv[]) {
 
       case 5:
       // Mean vs Medain conclusion
-      float mean = 0;
+      float calc_mean = 0;
       Mean mean();
-      mean = mean.calculated(data.size(), data);
+      calc_mean = mean.calculated(data.size(), data);
 
-      float median = 0;
+      float calc_median = 0;
       Median median();
-      median = median.calculated(data.size(), data);
+      calc_median = median.calculated(data.size(), data);
 
       std::cout << "Mean:: " << mean << std::endl << "Median:: " << median << std::endl;
       break;
@@ -88,7 +88,7 @@ int main(int argc, char *argv[]) {
       break;
 
       default:
-        std::cout << "That is not one of the options I presented, you are not QA" << std::endl
+        std::cout << "That is not one of the options I presented, you are not QA" << std::endl;
       break;
 
     }
