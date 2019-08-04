@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
+#include <string>
 
 std::vector<int> thiccc_stack(500);
 int input_prev{0}, input_curr{0}, stack_size{500};
@@ -35,3 +36,9 @@ void stack_input(){
 		}
 	}
 }
+
+// Text color
+std::string blueColor(std::string message);
+std::string greenColor(std::string message);
+std::string redColor(std::string message);
+std::string swapColor(std::string message);
