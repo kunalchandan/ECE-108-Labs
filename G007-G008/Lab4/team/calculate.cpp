@@ -1,6 +1,6 @@
 #include <vector>
-#include "Mean.cpp"
-#include "Median.cpp"
+// #include "Mean.cpp"
+// #include "Median.cpp"
 #include "testMean.cpp"
 #include "testMedian.cpp"
 #include "stack_gen.cpp"
