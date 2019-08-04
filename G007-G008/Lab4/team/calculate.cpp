@@ -57,11 +57,11 @@ int main(int argc, char *argv[]) {
         // Mean vs Medain conclusion
         float calc_mean = 0;
         Mean mean();
-        calc_mean = mean.calculated(data);
+        calc_mean = mean.evaluate(data);
 
         float calc_median = 0;
         Median median();
-        calc_median = median.calculated(data);
+        calc_median = median.evaluate(data);
 
         std::cout << "Mean:: " << mean << std::endl << "Median:: " << median << std::endl;
       }
