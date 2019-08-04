@@ -1,4 +1,6 @@
 #include <vector>
+#include "Mean.h"
+#include "Medain.h"
 #include "testMean.cpp"
 #include "testMedian.cpp"
 #include "stack_gen.cpp"
@@ -56,14 +58,14 @@ int main(int argc, char *argv[]) {
       {
         // Mean vs Medain conclusion
         float calc_mean = 0;
-        Mean mean();
+        Mean mean;
         calc_mean = mean.evaluate(data);
 
         float calc_median = 0;
-        Median median();
+        Median median;
         calc_median = median.evaluate(data);
 
-        std::cout << "Mean:: " << mean << std::endl << "Median:: " << median << std::endl;
+        std::cout << "Mean:: " << calc_mean << std::endl << "Median:: " << calc_median << std::endl;
       }
       break;
 
