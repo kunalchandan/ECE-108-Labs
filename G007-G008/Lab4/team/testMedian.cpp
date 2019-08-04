@@ -1,8 +1,7 @@
-#include <iostream>
 #include "testMedian.h"
 #include "Median.cpp"
-#include "stack_gen.cpp"
 #include "shared.cpp"
+#include <iostream>
 #include <string>
 #include <vector>
 

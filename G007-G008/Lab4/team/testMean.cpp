@@ -1,6 +1,5 @@
 #include "Mean.h"
 #include "testMean.h"
-#include "stack_gen.cpp"
 #include <iostream>
 
 int main();
