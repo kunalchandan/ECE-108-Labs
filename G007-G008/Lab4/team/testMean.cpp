@@ -35,7 +35,7 @@ bool testMean(std::vector<int> input_set){
 
 	// Get Mean calculated by Mean class
 	Mean testing;
-	testing.calculated(input_size, input_set);
+	testing.calculated(input_set);
 
 	// Compare calculated and retrieved values
 	if(testing.get_mean() != input_mean){
