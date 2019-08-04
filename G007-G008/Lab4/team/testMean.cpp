@@ -53,9 +53,11 @@ bool testMean(std::vector<int> input_set){
 	return output;
 }
 
+/*
 int main(){
 	auto big_data = dataset();
 	bool test1 = testMean();
+	int stack_size = 10;
 	bool test2 = testMean(stack_size, big_data);
 
 	if(test1 && test2){
@@ -66,3 +68,4 @@ int main(){
 
 	return 0;
 }
+*/
