@@ -1,5 +1,5 @@
 #include "testMedian.h"
-#include "Median.h"
+#include "Median.cpp"
 #include "shared.cpp"
 #include <iostream>
 #include <string>
@@ -42,7 +42,7 @@ bool testMedian(vector<int> data_set){
     test.evaluate(data_set);
 
     if (input_size % 2 == 1){
-        median = data_set[floor(input_size/2)];
+        median = data_set[int(input_size/2)];
     }else{
         median = (data_set[input_size/2 - 1] + data_set[input_size/2])/2.0;
     }

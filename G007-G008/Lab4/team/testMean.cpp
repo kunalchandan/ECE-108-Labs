@@ -1,4 +1,4 @@
-#include "Mean.h"
+#include "Mean.cpp"
 #include "testMean.h"
 #include <iostream>
 
