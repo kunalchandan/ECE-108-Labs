@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
   int opp_code = 0;
 
   auto data = dataset();
-  int[] test_data = {1,2,3,4,5,6,7,8,9};
+  int test_data[] = {1,2,3,4,5,6,7,8,9};
   std::vector<int> test (test_data, test_data + sizeof(test_data) / sizeof(int));
 
   while (not_quit) {

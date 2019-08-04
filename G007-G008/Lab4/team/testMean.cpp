@@ -2,8 +2,6 @@
 #include "testMean.h"
 #include <iostream>
 
-int main();
-
 // I'm not sure this function needs to exist
 bool testMean(){
 	bool output = true;
