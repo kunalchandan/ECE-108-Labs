@@ -1,13 +1,15 @@
 #include <iostream>
 #include "medianTest.h"
-#include "Median.h"
-#include "../team/stack_gen.cpp"
-#include "../team/shared.h"
+#include "Median.cpp"
+#include "stack_gen.cpp"
+#include "shared.cpp"
 #include <string>
+#include <vector>
 
 using std::string;
 using std::cout;
 using std::cin;
+using std::vector;
 
 bool testMedian(){
     bool passed = true;
@@ -60,4 +62,18 @@ bool testMedian(unsigned int input_size, vector<int> data_set){
 
     cout << message;
     return passed;
+}
+
+int main(){
+    bool test1 = testMedian();
+    auto data = dataset();
+    bool test2 = testMedian(data.size(), data);
+
+    if(test1 && test2){
+        std::cout << "Test success: Median";
+    }else{
+        std::cout << "Test failed: Median";
+    }
+
+    return 0;
 }
