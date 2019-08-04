@@ -7,7 +7,7 @@ class Mean{
 		
 		Mean();
 		
-		~Mean();S
+		~Mean();
 		
 		float evaluate( vector<int> input_set);
 		
