@@ -31,7 +31,7 @@ unsigned int Mean::get_size() {
 	
 }
 
-float Mean::calculated(vector<int> input_set) {
+float Mean::evaluate(vector<int> input_set) {
 	
 	this -> input_size = input_set.size();
 	

@@ -7,9 +7,9 @@ class Mean{
 		
 		Mean();
 		
-		~Mean();
+		~Mean();S
 		
-		float calculated( vector<int> input_set);
+		float evaluate( vector<int> input_set);
 		
 		float get_mean();
 		
