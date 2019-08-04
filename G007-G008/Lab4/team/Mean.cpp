@@ -31,9 +31,9 @@ unsigned int Mean::get_size() {
 	
 }
 
-float Mean::calculated(unsigned int input_size, vector<int> input_set) {
+float Mean::calculated(vector<int> input_set) {
 	
-	this -> input_size = input_size;
+	this -> input_size = input_set.size();
 	
 	int sum {};
 	for(int i = 1; i <= input_size; i++){
