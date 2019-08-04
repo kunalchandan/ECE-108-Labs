@@ -53,16 +53,18 @@ int main(int argc, char *argv[]) {
       break;
 
       case 5:
-      // Mean vs Medain conclusion
-      float calc_mean = 0;
-      Mean mean();
-      calc_mean = mean.calculated(data.size(), data);
+      {
+        // Mean vs Medain conclusion
+        float calc_mean = 0;
+        Mean mean();
+        calc_mean = mean.calculated(data);
 
-      float calc_median = 0;
-      Median median();
-      calc_median = median.calculated(data.size(), data);
+        float calc_median = 0;
+        Median median();
+        calc_median = median.calculated(data);
 
-      std::cout << "Mean:: " << mean << std::endl << "Median:: " << median << std::endl;
+        std::cout << "Mean:: " << mean << std::endl << "Median:: " << median << std::endl;
+      }
       break;
 
       case 6:
