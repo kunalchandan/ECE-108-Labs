@@ -10,8 +10,8 @@ void stack_input(){
 	srand(time(NULL));
 	for(int i = 0; i < stack_size; ++i){
 		input_curr = rand() % 111;
-		if(input_curr == 9 || input_curr == 18 || input_curr == 27){	
-			// if the input is 9, 18, or 27 then increase stack size by prev input
+		if(input_curr == 9 || input_curr == 18){	
+			// if the input is 9 or 18 then increase stack size by prev input
 		    thiccc_stack[i] = input_curr;
 		    thiccc_stack.resize(stack_size + input_prev);
 			stack_size += input_prev;
