@@ -36,12 +36,12 @@ int main(int argc, char *argv[]) {
       case 1:
       // Generate a Test Mean Class???
       // Basically I'm gonna run the test Mean function on data >= 500
-      testMean(data);
+      testMean(test_data);
       break;
 
       case 2:
       // Generate a Test Median Class???
-      testMedian(data);
+      testMedian(test_data);
       break;
 
       case 3:
