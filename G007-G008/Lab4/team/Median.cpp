@@ -33,12 +33,9 @@ float Median::evaluate(vector<int> data_set) {
     sort(data_set.begin(), data_set.end());
     //if the size is odd then just take the middle term, otherwise, take the mean of the middle two terms.
     if (input_size % 2 == 1){
-        cout << "Median Odd: ";
         this->median = data_set[floor(input_size/2)];
     }else{
-        cout << "Median Even: ";
         this->median = (data_set[input_size/2 - 1] + data_set[input_size/2])/2.0;
     }
-    cout << this->median << std::endl;
     return this->median;
 }

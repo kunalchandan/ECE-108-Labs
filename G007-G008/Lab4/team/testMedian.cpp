@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 using std::string;
 using std::cout;
@@ -41,11 +42,14 @@ bool testMedian(vector<int> data_set){
     Median test;
     test.evaluate(data_set);
 
+    sort(data_set.begin(), data_set.end());
+
     if (input_size % 2 == 1){
         median = data_set[int(input_size/2)];
     }else{
         median = (data_set[input_size/2 - 1] + data_set[input_size/2])/2.0;
     }
+
 
     if (test.get_median() != median){
         message += redColor("\n ERROR:: Failed .get_median() \n");
