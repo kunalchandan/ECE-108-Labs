@@ -13,11 +13,9 @@ using std::floor;
 Median::Median() {
     this->median = 0.0;
     this->input_size = 0;
-    cout << "Median Class instantiated" << endl;
 }
 
 Median::~Median() {
-    cout << "median class deleted" << endl;
 }
 
 float Median::get_median() {

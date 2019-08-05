@@ -21,7 +21,7 @@ bool testMean(){
 }
 
 bool testMean(std::vector<int> input_set){
-	uint input_size = input_set.size();
+	float input_size = input_set.size();
 
 	bool output = true;
 

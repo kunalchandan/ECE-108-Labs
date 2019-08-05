@@ -33,30 +33,26 @@ int main(int argc, char *argv[]) {
     }
 
     switch (opp_code) {
-      case 1: {
-          // Generate a Test Mean Class???
-          // Basically I'm gonna run the test Mean function on data >= 500
-          testMean(data);
-          break;
-      }
+      case 1:
+      // Generate a Test Mean Class???
+      // Basically I'm gonna run the test Mean function on data >= 500
+      testMean(data);
+      break;
 
-      case 2: {
-          // Generate a Test Median Class???
-          testMedian(data);
-          break;
-      }
+      case 2:
+      // Generate a Test Median Class???
+      testMedian(data);
+      break;
 
-      case 3: {
-          // Mean ten data samples
-          testMean(test);
-          break;
-      }
+      case 3:
+      // Mean ten data samples
+      testMean(test);
+      break;
 
-      case 4: {
-          // Medain ten data samples
-          testMedian(test);
-          break;
-      }
+      case 4:
+      // Medain ten data samples
+      testMedian(test);
+      break;
 
       case 5:
       {
@@ -70,42 +66,37 @@ int main(int argc, char *argv[]) {
         calc_median = median.evaluate(data);
 
         std::cout << "Mean:: " << calc_mean << std::endl << "Median:: " << calc_median << std::endl;
-        break;
       }
+      break;
 
+      case 6:
+      // Display latest input set values
+        for (int i = 0; i < data.size(); i++){
+            std::cout << data[i] << " ";
+            if (i % 20 == 0){
+                std::cout << std::endl;
+            }
+        }
+        std::cout << std::endl << std::endl;
+      break;
 
-      case 6: {
-          // Display latest input set values
-          std::cout << data.size() << std::endl;
-//        for (int i = 0; i < data.size(); i++){
-//            std::cout << data[i] << " ";
-//            if (i % 50 == 0){
-//                std::cout << std::endl;
-//            }
-//        }
-          break;
-      }
+      case 7:
+      // Credits
+        std::cout << "Welcome to the Credits:" << std::endl;
 
+        std::cout << "Group 007:" << std::endl;
+        std::cout << "Ahmad Hussain & Leo (Quancong) Ni" << std::endl;
 
-      case 7: {
-          // Credits
-          std::cout << "Welcome to the Credits:" << std::endl;
+        std::cout << "Group 008:" << std::endl;
+        std::cout << "Nicholas Paquin & Kunal Chandan" << std::endl;
 
-          std::cout << "Group 007:" << std::endl;
-          std::cout << "Ahmad Hussain & Leo (Quancong) Ni" << std::endl;
+      break;
 
-          std::cout << "Group 008:" << std::endl;
-          std::cout << "Nicholas Paquin & Kunal Chandan" << std::endl;
-
-          break;
-      }
-
-      case 8: {
-          // Exit
-          std::cout << "Exiting mean, median program." << std::endl;
-          not_quit = false;
-          break;
-      }
+      case 8:
+      // Exit
+      std::cout << "Exiting mean, median program." << std::endl;
+      not_quit = false;
+      break;
 
       default:
         std::cout << "That is not one of the options I presented, you are not QA" << std::endl;

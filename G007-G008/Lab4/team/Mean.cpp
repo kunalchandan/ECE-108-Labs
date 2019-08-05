@@ -10,15 +10,12 @@ using std::vector;
 
 
 Mean::Mean() {
-	this -> mean = 0;
+	this -> mean = 0.0;
 	this -> input_size = 0;
-	cout << "Mean Class instantiated" << endl;
 	
 }
 
 Mean::~Mean() {
-	cout << "Mean class deleted" << endl;
-	
 }
 
 float Mean::get_mean() {
@@ -36,13 +33,13 @@ float Mean::evaluate(vector<int> input_set) {
 	this -> input_size = input_set.size();
 	
 	int sum {};
-	for(int i = 1; i <= input_size; i++){
+	for(int i = 0; i < input_size; i++){
 		sum += input_set[i];
 		
 	}
 	//finds sum of all values in the vector 
 	
-	this -> mean = sum / input_size;
+	this -> mean = float(sum) / input_size;
 	
 	cout << this -> mean << endl;
 	
