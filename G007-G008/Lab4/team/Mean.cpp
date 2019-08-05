@@ -40,8 +40,7 @@ float Mean::evaluate(vector<int> input_set) {
 	//finds sum of all values in the vector 
 	
 	this -> mean = float(sum) / input_size;
-	
-	cout << this -> mean << endl;
+
 	
 	return this -> mean;
 }

@@ -24,10 +24,10 @@ bool testMedian(){
     }
 
     if (test.get_size() != 0){
-        message += redColor("\n ERROR:: Failed .get_size() \n");
+        message += redColor("\n ERROR:: Failed .get_size() \n\n");
         passed = false;
     }else{
-        message += greenColor("\n Passed .get_size() \n");
+        message += greenColor("\n Passed .get_size() \n\n");
     }
 
     cout << message;
@@ -59,10 +59,10 @@ bool testMedian(vector<int> data_set){
     }
 
     if (test.get_size() != input_size){
-        message += redColor("\n ERROR:: Failed .get_size() \n");
+        message += redColor("\n ERROR:: Failed .get_size() \n\n");
         passed = false;
     }else{
-        message += greenColor("\n Passed .get_size() \n");
+        message += greenColor("\n Passed .get_size() \n\n");
     }
 
     cout << message;

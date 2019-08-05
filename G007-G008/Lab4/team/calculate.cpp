@@ -8,11 +8,12 @@
 int main(int argc, char *argv[]) {
   bool not_quit = true;
   int opp_code = 0;
+  std::vector<int> last_used_set;
 
   auto data = dataset();
   int test_data[] = {1,2,3,4,5,6,7,8,9};
   std::vector<int> test (test_data, test_data + sizeof(test_data) / sizeof(int));
-
+  last_used_set = data;
   while (not_quit) {
     std::cout << "Mean & Median Age Census" << std::endl;
     std::cout << "------------------------" << std::endl;
@@ -37,21 +38,25 @@ int main(int argc, char *argv[]) {
       // Generate a Test Mean Class???
       // Basically I'm gonna run the test Mean function on data >= 500
       testMean(data);
+      last_used_set = data;
       break;
 
       case 2:
       // Generate a Test Median Class???
       testMedian(data);
+      last_used_set = data;
       break;
 
       case 3:
       // Mean ten data samples
       testMean(test);
+      last_used_set = test;
       break;
 
       case 4:
       // Medain ten data samples
       testMedian(test);
+      last_used_set = test;
       break;
 
       case 5:
@@ -71,9 +76,10 @@ int main(int argc, char *argv[]) {
 
       case 6:
       // Display latest input set values
-        for (int i = 0; i < data.size(); i++){
-            std::cout << data[i] << " ";
-            if (i % 20 == 0){
+        std::cout << std::endl;
+        for (int i = 0; i < last_used_set.size(); i++){
+            std::cout << last_used_set[i] << " ";
+            if (i + 1 % 20 == 0){
                 std::cout << std::endl;
             }
         }
