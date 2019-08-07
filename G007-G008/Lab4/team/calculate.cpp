@@ -1,7 +1,8 @@
 #include <vector>
+#include <cstdlib>
 #include "shared.h"
-#include "../grp1/Mean.h"
-#include "../grp2/Median.h"
+#include "Mean.h"
+#include "Median.h"
 #include "../grp1/testMean.h"
 #include "../grp2/testMedian.h"
 
@@ -37,13 +38,13 @@ int main(int argc, char *argv[]) {
       case 1:
       // Generate a Test Mean Class???
       // Basically I'm gonna run the test Mean function on data >= 500
-      testMean(data);
+      system("../grp1/testMean");
       last_used_set = data;
       break;
 
       case 2:
       // Generate a Test Median Class???
-      testMedian(data);
+      system("../grp2/testMedian");
       last_used_set = data;
       break;
 

@@ -68,18 +68,3 @@ bool testMedian(vector<int> data_set){
     cout << message;
     return passed;
 }
-
-int main(){
-    auto big_data = dataset();
-    bool test = testMedian(big_data);
-
-    std::cout << blueColor("Testing Median function") << std::endl;
-
-    if(test){
-        std::cout << greenColor("Test success: Median") << std::endl;
-    }else{
-        std::cout << redColor("Test failed: Median") << std::endl;
-    }
-
-    return 0;
-}
