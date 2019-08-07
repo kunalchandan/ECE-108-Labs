@@ -1,6 +1,8 @@
-#include "Mean.cpp"
+#include "Mean.h"
 #include "testMean.h"
 #include <iostream>
+#include "../team/shared.h"
+#include "../team/calculate.cpp"
 
 // I'm not sure this function needs to exist
 bool testMean(){
@@ -50,19 +52,21 @@ bool testMean(std::vector<int> input_set){
 	return output;
 }
 
-/*
+
 int main(){
 	auto big_data = dataset();
 	bool test1 = testMean();
 	int stack_size = 10;
-	bool test2 = testMean(stack_size, big_data);
+	bool test2 = testMean(big_data);
+
+	std::cout << blueColor("Testing Mean function") << std::endl;
 
 	if(test1 && test2){
-		std::cout << "Test success: Mean";
+		std::cout << greenColor("Test success: Mean") << std::endl;
 	}else{
-		std::cout << "Test failed: Mean";
+		std::cout << redColor("Test failed: Mean") << std::endl;
 	}
 
 	return 0;
 }
-*/
+
