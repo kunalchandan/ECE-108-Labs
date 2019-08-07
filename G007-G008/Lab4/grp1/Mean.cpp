@@ -46,7 +46,3 @@ float Mean::evaluate(vector<int> input_set) {
 	return this -> mean;
 }
 
-int main(){
-
-    return 1;
-}

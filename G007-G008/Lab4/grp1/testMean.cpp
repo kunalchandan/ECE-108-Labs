@@ -1,8 +1,8 @@
 #include "Mean.h"
 #include "testMean.h"
 #include <iostream>
+//#include "../team/stack_gen.cpp"
 #include "../team/shared.h"
-#include "../team/calculate.cpp"
 
 // I'm not sure this function needs to exist
 bool testMean(){
