@@ -9,7 +9,7 @@ public:
 
     ~Median();
 
-    float evaluate(unsigned int input_size, vector<int> data_set);
+    float evaluate( vector<int> data_set);
 
     float get_median();
 

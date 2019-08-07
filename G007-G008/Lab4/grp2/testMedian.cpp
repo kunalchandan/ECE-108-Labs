@@ -1,10 +1,10 @@
-#include <iostream>
-#include "medianTest.h"
+#include "testMedian.h"
 #include "Median.cpp"
-#include "stack_gen.cpp"
 #include "shared.cpp"
+#include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 using std::string;
 using std::cout;
@@ -24,27 +24,32 @@ bool testMedian(){
     }
 
     if (test.get_size() != 0){
-        message += redColor("\n ERROR:: Failed .get_size() \n");
+        message += redColor("\n ERROR:: Failed .get_size() \n\n");
         passed = false;
     }else{
-        message += greenColor("\n Passed .get_size() \n");
+        message += greenColor("\n Passed .get_size() \n\n");
     }
 
     cout << message;
     return passed;
 }
 
-bool testMedian(unsigned int input_size, vector<int> data_set){
+bool testMedian(vector<int> data_set){
+    int input_size = data_set.size();
     bool passed = true;
     float median{0.0};
     string message = "";
     Median test;
+    test.evaluate(data_set);
+
+    sort(data_set.begin(), data_set.end());
 
     if (input_size % 2 == 1){
-        median = data_set[floor(input_size/2)];
+        median = data_set[int(input_size/2)];
     }else{
         median = (data_set[input_size/2 - 1] + data_set[input_size/2])/2.0;
     }
+
 
     if (test.get_median() != median){
         message += redColor("\n ERROR:: Failed .get_median() \n");
@@ -54,26 +59,12 @@ bool testMedian(unsigned int input_size, vector<int> data_set){
     }
 
     if (test.get_size() != input_size){
-        message += redColor("\n ERROR:: Failed .get_size() \n");
+        message += redColor("\n ERROR:: Failed .get_size() \n\n");
         passed = false;
     }else{
-        message += greenColor("\n Passed .get_size() \n");
+        message += greenColor("\n Passed .get_size() \n\n");
     }
 
     cout << message;
     return passed;
-}
-
-int main(){
-    bool test1 = testMedian();
-    auto data = dataset();
-    bool test2 = testMedian(data.size(), data);
-
-    if(test1 && test2){
-        std::cout << "Test success: Median";
-    }else{
-        std::cout << "Test failed: Median";
-    }
-
-    return 0;
 }
