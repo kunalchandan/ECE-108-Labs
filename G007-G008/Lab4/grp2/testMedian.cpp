@@ -14,7 +14,7 @@ using std::vector;
 bool testMedian(){
     bool passed = true;
     string message = "";
-    Median test;
+    Median test();
 
     if (test.get_median() != 0){
         message += redColor("\n ERROR:: Failed .get_median() \n");
@@ -39,7 +39,7 @@ bool testMedian(vector<int> data_set){
     bool passed = true;
     float median{0.0};
     string message = "";
-    Median test;
+    Median test();
     test.evaluate(data_set);
 
     sort(data_set.begin(), data_set.end());
