@@ -11,7 +11,7 @@ testMean:  ../team/shared.h ../team/shared.cpp *.h *.cpp
 			mv -u Mean.o ../team
 
 run:        testMean
-			./testMean
+			./testMean.exe
 
 clean:	
 			rm -f testMean
