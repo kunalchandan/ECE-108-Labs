@@ -43,4 +43,3 @@ std::string greenColor(std::string message);
 std::string redColor(std::string message);
 std::string swapColor(std::string message);
 std::vector<int> dataset();
-

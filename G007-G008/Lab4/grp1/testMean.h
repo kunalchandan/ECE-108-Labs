@@ -1,4 +1,4 @@
 #include <iostream>
+#include <vector>
 
-bool testMean();
-bool testMean(vector<int> input_set);
+bool testMean(std::vector<int> input_set);

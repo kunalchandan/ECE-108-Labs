@@ -1,4 +1,7 @@
 #include <vector>
+#include "shared.h"
+#include "../grp1/Mean.h"
+#include "../grp2/Median.h"
 #include "../grp1/testMean.h"
 #include "../grp2/testMedian.h"
 
