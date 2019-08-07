@@ -1,7 +1,6 @@
 #include <vector>
 #include "../grp1/testMean.h"
 #include "../grp2/testMedian.h"
-#include "stack_gen.cpp"
 
 int main(int argc, char *argv[]) {
   bool not_quit = true;

@@ -3,7 +3,6 @@ testMean:  ../team/shared.h ../team/shared.cpp *.h *.cpp
 			g++ -c Mean.cpp
 			g++ -c testMean.cpp
 			g++ *.o -o testMean
-					
 			#
 			# Send files to team directory
 			#
@@ -11,8 +10,8 @@ testMean:  ../team/shared.h ../team/shared.cpp *.h *.cpp
 			mv -u Mean.o ../team
 
 run:        testMean
-			./testMean.exe
+			./testMean
 
-clean:	
+clean:
 			rm -f testMean
 			rm -f *.o
