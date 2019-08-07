@@ -13,11 +13,12 @@ using std::vector;
 
 int main(){
     auto big_data = dataset();
-    bool test = testMedian(big_data);
+    bool test1 = testMedian(big_data);
+    bool test2 = testMedian();
 
     std::cout << blueColor("Testing Median function") << std::endl;
 
-    if(test){
+    if(test1 && test2){
         std::cout << greenColor("Test success: Median") << std::endl;
     }else{
         std::cout << redColor("Test failed: Median") << std::endl;
