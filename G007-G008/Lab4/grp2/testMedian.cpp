@@ -71,8 +71,6 @@ bool testMedian(vector<int> data_set){
 
 int main(){
     auto big_data = dataset();
-    bool test1 = testMedian();
-    int stack_size = 10;
     bool test2 = testMedian(big_data);
 
     std::cout << blueColor("Testing Median function") << std::endl;
