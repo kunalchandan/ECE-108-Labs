@@ -1,6 +1,6 @@
 #include "testMedian.h"
 #include "Median.cpp"
-#include "shared.cpp"
+#include "../team/shared.cpp"
 #include <iostream>
 #include <string>
 #include <vector>

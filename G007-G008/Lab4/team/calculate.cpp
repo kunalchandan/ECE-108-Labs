@@ -1,8 +1,6 @@
 #include <vector>
-// #include "Mean.cpp"
-// #include "Median.cpp"
-#include "testMean.cpp"
-#include "testMedian.cpp"
+#include "../grp1/testMean.h"
+#include "../grp2/testMedian.h"
 #include "stack_gen.cpp"
 
 int main(int argc, char *argv[]) {
