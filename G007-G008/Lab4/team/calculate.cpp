@@ -50,14 +50,30 @@ int main(int argc, char *argv[]) {
 
       case 3:
       // Mean ten data samples
-      testMean(test);
-      last_used_set = test;
+      for(int x = 0; x < 10; x++){
+        auto new_data = dataset();
+
+        int size = new_data.size();
+
+        bool result = testMean(new_data);
+        std::cout << "The size of the dataset used was:: " << size << std::endl;
+
+        last_used_set = new_data;
+      }
       break;
 
       case 4:
       // Medain ten data samples
-      testMedian(test);
-      last_used_set = test;
+      for(int x = 0; x < 10; x++){
+        auto new_data = dataset();
+
+        int size = new_data.size();
+
+        bool result = testMedian(new_data);
+        std::cout << "The size of the dataset used was:: " << size << std::endl;
+
+        last_used_set = new_data;
+      }
       break;
 
       case 5:
