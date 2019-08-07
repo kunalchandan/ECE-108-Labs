@@ -1,6 +1,6 @@
 #include "testMedian.h"
-#include "Median.cpp"
-#include "../team/shared.cpp"
+#include "Median.h"
+#include "../team/shared.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -67,4 +67,21 @@ bool testMedian(vector<int> data_set){
 
     cout << message;
     return passed;
+}
+
+int main(){
+    auto big_data = dataset();
+    bool test1 = testMedian();
+    int stack_size = 10;
+    bool test2 = testMedian(big_data);
+
+    std::cout << blueColor("Testing Median function") << std::endl;
+
+    if(test1 && test2){
+        std::cout << greenColor("Test success: Median") << std::endl;
+    }else{
+        std::cout << redColor("Test failed: Median") << std::endl;
+    }
+
+    return 0;
 }
