@@ -91,12 +91,11 @@ int main(int argc, char *argv[]) {
             // Credits
             std::cout << "Welcome to the Credits:" << std::endl;
 
-            std::cout << "Group 007:" << std::endl;
-            std::cout << "Ahmad Hussain & Leo (Quancong) Ni" << std::endl;
-
             std::cout << "Group 008:" << std::endl;
             std::cout << "Nicholas Paquin & Kunal Chandan" << std::endl;
 
+            std::cout << "Group 007:" << std::endl;
+            std::cout << "Ahmad Hussain & Leo (Quancong) Ni" << std::endl;
         } else if (opp_code == 8) {
             // Exit
             std::cout << "Exiting mean, median program." << std::endl;
