@@ -9,14 +9,18 @@ bool testMean(){
 	Mean testing;
 
 	if(testing.get_mean() != 0){
-		std::cout << "Test failed: Mean::get_mean()" << std::endl;
+		std::cout << redColor("Test failed: Mean::get_mean()") << std::endl;
 		output = false;
-	}
+	}else {
+        std::cout << greenColor("PASSED: .get_mean") << std::endl;
+    }
 
 	if(testing.get_size() != 0){
-		std::cout << "Test failed: Mean::get_size()" << std::endl;
+		std::cout << redColor("Test failed: Mean::get_size()") << std::endl;
 		output = false;
-	}
+	}else {
+        std::cout << greenColor("PASSED: .get_size") << std::endl;
+    }
 
 	return output;
 }
@@ -40,13 +44,17 @@ bool testMean(std::vector<int> input_set){
 
 	// Compare calculated and retrieved values
 	if(testing.get_mean() != input_mean){
-		std::cout << "Our mean, and the mean calculated by the Mean Class do not match" << std::endl;
+		std::cout << redColor("Our mean, and the mean calculated by the Mean Class do not match") << std::endl;
 		output = false;
+	}else {
+	    std::cout << greenColor("PASSED: .get_mean") << std::endl;
 	}
 	if(testing.get_size() != input_size){
-		std::cout << "Our input size, and the size calculated by the Mean Class do not match" << std::endl;
+		std::cout << redColor("Our input size, and the size calculated by the Mean Class do not match") << std::endl;
 		output = false;
-	}
+	}else {
+        std::cout << greenColor("PASSED: .get_size") << std::endl;
+    }
 
 	return output;
 }
